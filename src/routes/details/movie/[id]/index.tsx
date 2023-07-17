@@ -20,21 +20,18 @@ export default component$(() => {
     return (
         <>
             <div class="flex justify-center  text-white pt-5 font-bold">
-                <div class="w-3/4">
-                    <div class="flex justify-start border border-red-500 mt-[4px] mb-[4px] p-[4px]">
-                        <h2 class="mr-[5px]">Original title</h2>
-                        <h2 class="">"{response.value.original_title}"</h2>
-                    </div>
-                        <div class="flex justify-start border border-red-500 mt-[4px] mb-[4px] p-[4px]">
+                <div class="w-3/4 text-center">
+                        <h2 class="text-red-500 text-3xl mb-5">{response.value.original_title}</h2>
+                        <div class="flex justify-start border border-gray-800 mt-[4px] mb-[4px] p-[4px]">
                         <h2 class="mr-[5px]">Realeased date</h2>
                         <h2 class="text-orange-300">{response.value.release_date}</h2>
                     </div>
-                    <div class="flex justify-start  border border-red-500 mt-[4px] mb-[4px] p-[4px]">
+                    <div class="flex justify-start  border border-gray-800 mt-[4px] mb-[4px] p-[4px]">
                         <h2 class="mr-[5px]">Classification</h2>
                         <h2 class="text-green-500">{!response.value.adult ? " For all public" : ""}</h2>
                         <h2 class="text-red-500">{response.value.adult ? " +18" : ""}</h2>
                     </div>
-                    <div class="flex justify-start  border border-red-500 mt-[4px] mb-[4px] p-[4px]">
+                    <div class="flex justify-start  border border-gray-800 mt-[4px] mb-[4px] p-[4px]">
                         <h3 class="mr-[5px]">Genres</h3>
                         <h3 class="text-pink-500">
                             {response.value.genres.map((data: Genre) => {
@@ -42,8 +39,8 @@ export default component$(() => {
                             })}
                         </h3>
                     </div>
-                    <h2 class="border border-red-500 mt-[4px] mb-[4px] p-[4px]">{response.value.overview}</h2>
-                    <div class="flex justify-start border border-red-500 mt-[4px] mb-[4px] p-[4px]">
+                    <h2 class="border border-gray-800 mt-[4px] mb-[4px] p-[4px]">{response.value.overview}</h2>
+                    <div class="flex justify-start border border-gray-800 mt-[4px] mb-[4px] p-[4px]">
                         <h3 class="mr-[5px]">Produced by</h3>
                         <h3 class="text-red-500">
                             {response.value.production_companies.map(
